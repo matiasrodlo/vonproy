@@ -1,0 +1,448 @@
+/* ==========================================================================
+   Side area styles - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+/* ==========================================================================
+# Side area style - begin
+========================================================================== */
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-side-menu-button-opener,
+.qodef-light-header .qodef-top-bar .qodef-side-menu-button-opener {
+  color: #fff !important;
+}
+
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-side-menu-button-opener.qodef-side-menu-button-opener-predefined .qodef-hm-lines .qodef-hm-line,
+.qodef-light-header .qodef-top-bar .qodef-side-menu-button-opener.qodef-side-menu-button-opener-predefined .qodef-hm-lines .qodef-hm-line {
+  background-color: #fff !important;
+}
+
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-side-menu-button-opener.opened, .qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-side-menu-button-opener:hover,
+.qodef-light-header .qodef-top-bar .qodef-side-menu-button-opener.opened,
+.qodef-light-header .qodef-top-bar .qodef-side-menu-button-opener:hover {
+  color: #999 !important;
+}
+
+.qodef-dark-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-side-menu-button-opener,
+.qodef-dark-header .qodef-top-bar .qodef-side-menu-button-opener {
+  color: #000 !important;
+}
+
+.qodef-dark-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-side-menu-button-opener.qodef-side-menu-button-opener-predefined .qodef-hm-lines .qodef-hm-line,
+.qodef-dark-header .qodef-top-bar .qodef-side-menu-button-opener.qodef-side-menu-button-opener-predefined .qodef-hm-lines .qodef-hm-line {
+  background-color: #1b1b1b !important;
+}
+
+.qodef-side-menu-button-opener {
+  position: relative;
+  display: inline-block;
+  line-height: 1.1em;
+}
+
+.qodef-side-menu-button-opener .qodef-side-menu-title {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 8px 0 0;
+  color: currentColor;
+}
+
+.qodef-side-menu-button-opener .qodef-side-menu-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.qodef-side-menu-button-opener.opened, .qodef-side-menu-button-opener:hover {
+  color: #999;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-icon-pack .qodef-side-menu-icon {
+  font-size: 20px;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-icon-pack .qodef-side-menu-icon * {
+  display: block;
+  line-height: inherit;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-icon-pack .qodef-side-menu-icon *:before {
+  display: block;
+  line-height: inherit;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-svg-path .qodef-side-menu-icon:hover .qodef-burger-bar-1 {
+  -webkit-animation: widthAnim 1s;
+  animation: widthAnim 1s;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-svg-path .qodef-side-menu-icon:hover .qodef-burger-bar-2 {
+  -webkit-animation: widthAnim 1s 0.2s;
+  animation: widthAnim 1s 0.2s;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-svg-path .qodef-side-menu-icon:hover .qodef-burger-bar-3 {
+  -webkit-animation: widthAnim 1s 0.4s;
+  animation: widthAnim 1s 0.4s;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-svg-path .qodef-side-menu-icon .qodef-burger {
+  cursor: pointer;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-svg-path .qodef-side-menu-icon .qodef-burger .qodef-burger-bar-1,
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-svg-path .qodef-side-menu-icon .qodef-burger .qodef-burger-bar-2,
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-svg-path .qodef-side-menu-icon .qodef-burger .qodef-burger-bar-3 {
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+}
+
+@-webkit-keyframes widthAnim {
+  0%,
+  100%,
+  90% {
+    width: 100%;
+  }
+  40% {
+    width: 20%;
+  }
+}
+
+@keyframes widthAnim {
+  0%,
+  100%,
+  90% {
+    width: 100%;
+  }
+  40% {
+    width: 20%;
+  }
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-svg-path .qodef-side-menu-icon > *,
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-svg-path .qodef-side-menu-icon path {
+  fill: currentColor;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-predefined .qodef-hm-lines {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 12px;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-predefined .qodef-hm-lines .qodef-hm-line {
+  position: absolute;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: currentColor;
+  -webkit-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-predefined .qodef-hm-lines .qodef-hm-line.qodef-line-1 {
+  top: 1px;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-predefined .qodef-hm-lines .qodef-hm-line.qodef-line-2 {
+  top: 6px;
+}
+
+.qodef-side-menu-button-opener.qodef-side-menu-button-opener-predefined .qodef-hm-lines .qodef-hm-line.qodef-line-3 {
+  bottom: 0;
+}
+
+.qodef-right-side-menu-opened .qodef-close-icon .qodef-close-bar-1,
+.qodef-right-side-menu-opened .qodef-close-icon .qodef-close-bar-2, .qodef-fullscreen-search-opened .qodef-close-icon .qodef-close-bar-1,
+.qodef-fullscreen-search-opened .qodef-close-icon .qodef-close-bar-2 {
+  -webkit-transform: translate(100%, 100%);
+  -ms-transform: translate(100%, 100%);
+  transform: translate(100%, 100%);
+}
+
+.qodef-right-side-menu-opened .qodef-close-icon .qodef-close-bar-1, .qodef-fullscreen-search-opened .qodef-close-icon .qodef-close-bar-1 {
+  -webkit-animation: diag-left 0.5s 0.3s forwards;
+  animation: diag-left 0.5s 0.3s forwards;
+}
+
+.qodef-right-side-menu-opened .qodef-close-icon .qodef-close-bar-2, .qodef-fullscreen-search-opened .qodef-close-icon .qodef-close-bar-2 {
+  -webkit-animation: diag-right 0.5s 0.6s forwards;
+  animation: diag-right 0.5s 0.6s forwards;
+}
+
+@-webkit-keyframes diag-left {
+  0% {
+    -webkit-transform: translate(100%, 100%);
+    transform: translate(100%, 100%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes diag-left {
+  0% {
+    -webkit-transform: translate(100%, 100%);
+    transform: translate(100%, 100%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes diag-right {
+  0% {
+    -webkit-transform: translate(-100%, 100%);
+    transform: translate(-100%, 100%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes diag-right {
+  0% {
+    -webkit-transform: translate(-100%, 100%);
+    transform: translate(-100%, 100%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+.qodef-side-menu {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 420px;
+  height: 100%;
+  min-height: 100%;
+  padding: 126px 60px;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+  visibility: hidden;
+  z-index: 9999;
+  -webkit-backface-visibility: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.qodef-side-menu a.qodef-close-side-menu {
+  position: absolute;
+  top: 37px;
+  right: 60px;
+  display: block;
+  z-index: 1000;
+  color: #1b1b1b;
+  font-size: 23px;
+}
+
+.qodef-side-menu a.qodef-close-side-menu:hover {
+  color: #1b1b1b;
+}
+
+.admin-bar .qodef-side-menu a.qodef-close-side-menu {
+  top: 68px;
+}
+
+.qodef-side-menu a.qodef-close-side-menu.qodef-close-side-menu-icon-pack {
+  font-size: 22px;
+}
+
+.qodef-side-menu a.qodef-close-side-menu.qodef-close-side-menu-icon-pack * {
+  display: block;
+  line-height: inherit;
+}
+
+.qodef-side-menu a.qodef-close-side-menu.qodef-close-side-menu-icon-pack *:before {
+  display: block;
+  line-height: inherit;
+}
+
+.qodef-side-menu a.qodef-close-side-menu.qodef-close-side-menu-svg-path .qodef-close-icon {
+  cursor: pointer;
+}
+
+.qodef-side-menu a.qodef-close-side-menu.qodef-close-side-menu-svg-path .qodef-close-icon .qodef-close-bar-1,
+.qodef-side-menu a.qodef-close-side-menu.qodef-close-side-menu-svg-path .qodef-close-icon .qodef-close-bar-2 {
+  -webkit-transform-origin: 50%;
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+}
+
+.qodef-side-menu a.qodef-close-side-menu.qodef-close-side-menu-svg-path > * {
+  vertical-align: middle;
+}
+
+.qodef-side-menu a.qodef-close-side-menu.qodef-close-side-menu-svg-path > *,
+.qodef-side-menu a.qodef-close-side-menu.qodef-close-side-menu-svg-path path {
+  fill: currentColor;
+}
+
+/* ==========================================================================
+# Side area style - end
+========================================================================== */
+/* ==========================================================================
+# Side area slides over content style - begin
+========================================================================== */
+.qodef-right-side-menu-opened .qodef-wrapper,
+.qodef-right-side-menu-opened footer.qodef-footer-uncover,
+.qodef-right-side-menu-opened .qodef-fixed-wrapper.fixed,
+.qodef-right-side-menu-opened .qodef-sticky-header,
+.qodef-right-side-menu-opened .mobile-header-appear .qodef-mobile-header-inner {
+  left: 0;
+}
+
+.qodef-side-menu-slide-from-right .qodef-wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 1000;
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.qodef-side-menu-slide-from-right .qodef-wrapper .qodef-cover {
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  background-color: rgba(27, 27, 27, 0.3);
+  -webkit-transition: opacity 0.2s ease-in-out, z-index 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out, z-index 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, z-index 0.2s ease-in-out;
+}
+
+.qodef-side-menu-slide-from-right .qodef-sticky-header,
+.qodef-side-menu-slide-from-right .qodef-fixed-wrapper.fixed {
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.qodef-side-menu-slide-from-right footer.qodef-footer-uncover {
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.qodef-side-menu-slide-from-right.qodef-right-side-menu-opened .qodef-cover {
+  z-index: 1002;
+  opacity: 1;
+}
+
+.qodef-side-menu-slide-from-right.qodef-right-side-menu-opened .qodef-side-menu {
+  right: 0;
+  visibility: visible;
+}
+
+/* ==========================================================================
+# Side area slides over content style - end
+========================================================================== */
+/* ==========================================================================
+# Side area uncovering - begin
+========================================================================== */
+.qodef-side-area-uncovered-from-content.qodef-right-side-menu-opened .qodef-wrapper,
+.qodef-side-area-uncovered-from-content.qodef-right-side-menu-opened footer.qodef-footer-uncover,
+.qodef-side-area-uncovered-from-content.qodef-right-side-menu-opened .qodef-sticky-header,
+.qodef-side-area-uncovered-from-content.qodef-right-side-menu-opened .qodef-fixed-wrapper.fixed,
+.qodef-side-area-uncovered-from-content.qodef-right-side-menu-opened .qodef-mobile-header-inner,
+.qodef-side-area-uncovered-from-content.qodef-right-side-menu-opened .mobile-header-appear .qodef-mobile-header-inner {
+  left: -405px;
+}
+
+.qodef-side-area-uncovered-from-content .qodef-side-menu {
+  right: 0;
+  z-index: 90;
+}
+
+.qodef-side-area-uncovered-from-content .qodef-sticky-header,
+.qodef-side-area-uncovered-from-content .qodef-fixed-wrapper.fixed {
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* ==========================================================================
+# Side area uncovering - end
+========================================================================== */
+/* ==========================================================================
+# Side area slides with content style - begin
+========================================================================== */
+.qodef-side-menu-slide-with-content {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+  -webkit-overflow-scrolling: auto !important;
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.qodef-side-menu-slide-with-content .qodef-side-menu {
+  visibility: visible;
+}
+
+.qodef-side-menu-slide-with-content footer.qodef-footer-uncover,
+.qodef-side-menu-slide-with-content .qodef-wrapper {
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.qodef-side-menu-slide-with-content .qodef-sticky-header,
+.qodef-side-menu-slide-with-content .qodef-fixed-wrapper.fixed,
+.qodef-side-menu-slide-with-content .qodef-mobile-header-inner {
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.qodef-side-menu-slide-with-content.qodef-side-menu-open .qodef-wrapper,
+.qodef-side-menu-slide-with-content.qodef-side-menu-open footer.qodef-footer-uncover,
+.qodef-side-menu-slide-with-content.qodef-side-menu-open .qodef-sticky-header,
+.qodef-side-menu-slide-with-content.qodef-side-menu-open .qodef-fixed-wrapper,
+.qodef-side-menu-slide-with-content.qodef-side-menu-open .qodef-mobile-header-inner {
+  left: -405px;
+}
+
+.qodef-side-menu-slide-with-content.qodef-side-menu-open .qodef-side-menu {
+  right: 0;
+}
+
+/* ==========================================================================
+# Side area slides with content style - end
+========================================================================== */
+/* ==========================================================================
+# Side area responsive style - begin
+========================================================================== */
+@media only screen and (max-width: 1440px) {
+  .qodef-side-menu-slide-from-right .qodef-side-menu {
+    padding: 126px 60px 30px;
+  }
+}
+
+/* ==========================================================================
+# Side area style - end
+========================================================================== */
+/* ==========================================================================
+   Side area styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=sidearea-map.css.map */
