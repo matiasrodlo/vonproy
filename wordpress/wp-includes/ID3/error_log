@@ -1,0 +1,1 @@
+[13-Jan-2021 05:33:47 America/New_York] PHP Fatal error:  Class 'getid3_handler' not found in /home/meyzjcmc/public_html/vonproy/wp-includes/ID3/module.audio.ac3.php on line 18

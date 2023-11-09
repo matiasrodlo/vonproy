@@ -1,0 +1,34 @@
+1.2
+- Added WooCommerce 3.7.0 compatibility
+- Updated Core plugin to 1.1.2
+- Updated WPBakery Page Builder to 6.0.5
+- Updated Revolution Slider to 6.1.0
+- Improved Section Title text displaying
+- Minor improvements
+
+1.1.2
+- Updated WPBakery Page Builder to 6.0.1
+- Improved theme security
+- Minor improvements
+
+1.1.1
+- Added WooCommerce 3.6 compatibility
+- Updated Wordpress to 5.2
+- Updated Core plugin to 1.1.1
+- Improved import functionality
+- Improved theme security
+
+1.1
+- Updated WordPress to 5.1
+- Updated WooCommerce to 3.5.6
+- Updated Visual Composer to 5.7
+- Updated Revolution Slider to 5.4.8.3
+- Updated Dessau Core plugin to version 1.0.1
+- Updated Dessau Twitter feed plugin to version 1.0.1
+- Updated Dessau Instagram feed plugin to version 1.0.1
+- Updated pot files
+- Improved framework files
+
+1.0.1
+- Fixed portfolio single small masonry type content rendering
+- Fixed child theme styles importing

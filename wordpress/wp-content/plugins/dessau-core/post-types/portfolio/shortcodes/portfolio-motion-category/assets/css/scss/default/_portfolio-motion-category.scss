@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Portfolio motion category shortcode style - begin
+   ========================================================================== */
+
+.qodef-portfolio-mc-holder {
+	@include qodefRelativeHolderLayout();
+
+	.qodef-mc-categories {
+		@include qodefRelativeHolderLayout();
+		margin: 0;
+
+		.qodef-portfolio-mc-category {
+			float: left;
+			margin: 0;
+			text-align: center;
+			box-sizing: border-box;
+			text-transform: uppercase;
+			padding: 27px 0;
+			font-size: 13px;
+			font-weight: 500;
+			letter-spacing: 0.025em;
+		}
+	}
+
+	.qodef-pl-inner {
+		float: left;
+		height: calc(100vh - 56px - 49px); /* 56px for top + bottom paspartout and 83 for the top heading with categories ( 75px height + 8px margin bottom ) */
+		overflow: hidden;
+
+		article {
+			width: 100%;
+			height: auto;
+			transform: translateZ(0);
+			box-sizing: border-box;
+
+			&:first-child {
+				padding-top: 0;
+
+				.qodef-pli-text-holder{
+					height: calc(100% - 4px);
+					width: calc(100% - 8px);
+					top: 0;
+				}
+
+				&:last-child{
+					.qodef-pli-text-holder{
+						height: 100%;
+					}
+				}
+			}
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+
+			@media only screen and (min-width: 1280px) {
+				padding: 4px;
+			}
+		}
+	}
+
+	.qodef-portfolio-mc-mobile-view {
+		display: none;
+		height: 100%;
+
+		.swiper-container {
+			height: 100%;
+
+			.qodef-pli-image {
+				height: 100%;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+
+			.qodef-pli-title {
+				display: none;
+			}
+		}
+	}
+
+	$columns_number: ('1', '2', '3', '4', '5');
+
+	@for $i from 0 to length($columns_number) {
+		&.qodef-portfolio-mc-#{nth($columns_number,$i+1)}-columns {
+
+			.qodef-pl-inner,
+			.qodef-portfolio-mc-category {
+				width: 100% / ($i+1);
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Portfolio motion category shortcode style - end
+   ========================================================================== */

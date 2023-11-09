@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Image With Text shortcode style - begin
+   ========================================================================== */
+
+.qodef-image-with-text-holder {
+    @include qodefRelativeHolderLayout();
+	
+	&.qodef-has-shadow {
+		
+		.qodef-iwt-image {
+			box-shadow: 0 3px 11px 0 rgba(0,0,0,0.08);
+		}
+	}
+	
+	.qodef-iwt-image {
+		@include qodefRelativeHolderLayout();
+		
+		a, img {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	.qodef-iwt-text-holder {
+		@include qodefRelativeHolderLayout();
+	}
+	
+	.qodef-iwt-title {
+		margin: 32px 0 0;
+	}
+	
+	.qodef-iwt-text {
+		margin: 0;
+	}
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-custom-link {
+
+		.qodef-iwt-image {
+			@include qodefTransition(.5s);
+
+			&:hover {
+				@include qodefTransform(translateY(-4px));
+			}
+		}
+	}
+	
+	/***** Custom Link Behavior Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-lightbox {
+		
+		.qodef-iwt-image {
+			
+			a {
+				@include qodefImageOverlayHoverStyle();
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-zoom {
+		
+		.qodef-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include qodefTransform(scale(1.04));
+				}
+			}
+			
+			img {
+				@include qodefTransform(scale(1));
+				@include qodefTransitionTransform(.3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-grayscale {
+		
+		.qodef-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include qodefTransition(all .3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+}
+/* ==========================================================================
+   Image With Text shortcode style - end
+   ========================================================================== */

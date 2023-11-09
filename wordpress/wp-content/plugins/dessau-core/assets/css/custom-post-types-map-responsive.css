@@ -1,0 +1,325 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+/* ==========================================================================
+   Custom Post Types responsive styles
+   ========================================================================== */
+/* ==========================================================================
+   Masonry Gallery shortcodes responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-masonry-gallery-holder .qodef-mg-grid-sizer,
+  .qodef-masonry-gallery-holder .qodef-mg-item {
+    width: 50%;
+  }
+  .qodef-masonry-gallery-holder .qodef-mg-item.qodef-masonry-size-large-width, .qodef-masonry-gallery-holder .qodef-mg-item.qodef-masonry-size-large-width-height {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-masonry-gallery-holder .qodef-mg-grid-sizer,
+  .qodef-masonry-gallery-holder .qodef-mg-item {
+    width: 100%;
+  }
+  .qodef-masonry-gallery-holder .qodef-mg-item .qodef-mg-item-content {
+    padding: 25px 31px;
+  }
+  .qodef-masonry-gallery-holder .qodef-mg-item .qodef-mg-item-inner-text {
+    bottom: 25px;
+  }
+  .qodef-masonry-gallery-holder .qodef-mg-item.qodef-mg-with-button .qodef-mg-item-content {
+    padding: 25px 31px;
+  }
+}
+
+/* ==========================================================================
+   Masonry Gallery shortcodes responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Portfolio Single page responsive style - begin
+   ========================================================================== */
+.qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-gallery-images {
+  /***** Columns Layout - end *****/
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-gallery-images .qodef-ps-image {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-single-holder .qodef-ps-info-holder .qodef-ps-title {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-single-holder .qodef-ps-info-holder:not(.qodef-ps-info-sticky-holder) {
+    margin-top: 38px !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-single-holder.qodef-ps-small-gallery-layout .qodef-ps-info-holder:not(.qodef-ps-info-sticky-holder) {
+    margin-top: 23px !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-single-holder .qodef-ps-info-holder {
+    margin: 23px 0 0 !important;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-portfolio-single-holder .qodef-ps-navigation .qodef-ps-nav-title,
+  .qodef-portfolio-single-holder .qodef-ps-navigation img {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Portfolio Single page responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Portfolio Full Screen Slider shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1440px) {
+  .qodef-portfolio-full-screen-slider-holder #qodef-ptf-info-block .qodef-pli-text-holder {
+    height: 95%;
+  }
+  .qodef-portfolio-full-screen-slider-holder #qodef-ptf-info-block .qodef-pli-text {
+    padding-bottom: 28px;
+    vertical-align: bottom;
+    padding-top: 60px !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-full-screen-slider-holder #qodef-ptf-info-block.qodef-active {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-portfolio-full-screen-slider-holder #qodef-ptf-info-block.qodef-active {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-portfolio-full-screen-slider-holder #qodef-ptf-info-block {
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+  }
+  .qodef-portfolio-full-screen-slider-holder #qodef-ptf-info-block.qodef-active {
+    max-height: calc(100% - 69px);
+  }
+  .qodef-portfolio-full-screen-slider-holder #qodef-ptf-info-block.qodef-active .qodef-pli-text {
+    padding-top: 55px !important;
+    padding-bottom: 65px;
+  }
+  .qodef-portfolio-full-screen-slider-holder #qodef-ptf-info-block .qodef-pli-text {
+    padding: 59px 10px 0 20px;
+  }
+  .qodef-portfolio-full-screen-slider-holder #qodef-ptf-info-block .qodef-pli-info-holder .qodef-pli-info {
+    width: 100%;
+    padding-left: 0 !important;
+    border: none !important;
+  }
+  .qodef-portfolio-full-screen-slider-holder #qodef-ptf-info-block .qodef-pli-excerpt {
+    display: none;
+  }
+  .qodef-portfolio-full-screen-slider-holder .swiper-pagination {
+    display: none;
+  }
+  .qodef-portfolio-full-screen-slider-holder .qodef-prev,
+  .qodef-portfolio-full-screen-slider-holder .qodef-next {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Portfolio Full Screen Slider shortcode responsive style - end
+   ========================================================================== */
+@media only screen and (max-width: 680px) {
+  .qodef-portfolio-list-holder .qodef-pl-filter-holder {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .qodef-portfolio-list-holder.qodef-pl-gallery-overlay.qodef-portfolio-mc-holder .qodef-pl-item .qodef-pli-text-holder {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+/* ==========================================================================
+   Portfolio motion category shortcode style - begin
+   ========================================================================== */
+@media only screen and (max-width: 680px) {
+  .qodef-portfolio-mc-holder .qodef-mc-categories {
+    margin: 0;
+    background-color: transparent;
+    z-index: 2;
+  }
+  .qodef-portfolio-mc-holder .qodef-mc-categories .qodef-portfolio-mc-category {
+    position: relative;
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 23px 0 23px 20px;
+    text-align: left;
+    color: #fff;
+    background: rgba(54, 54, 54, 0.6);
+  }
+  .qodef-portfolio-mc-holder .qodef-mc-categories .qodef-portfolio-mc-category:after {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    font-size: 14px;
+    content: "\e876";
+    font-family: 'Linearicons-Free';
+    display: block;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .qodef-portfolio-mc-holder .qodef-mc-categories .qodef-portfolio-mc-category a {
+    display: block;
+    padding: 17px 25px;
+  }
+  .qodef-portfolio-mc-holder .qodef-pl-inner {
+    display: none;
+  }
+  .qodef-portfolio-mc-holder .qodef-portfolio-mc-mobile-view {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* ==========================================================================
+   Portfolio motion category shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Portfolio Slider shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qodef-portfolio-slider-holder .qodef-portfolio-list-holder .owl-nav {
+    display: none;
+  }
+  .qodef-portfolio-slider-holder .qodef-portfolio-list-holder .qodef-pl-item {
+    height: 90vh;
+    display: block;
+  }
+  .qodef-portfolio-slider-holder .qodef-portfolio-list-holder .qodef-pl-item-inner {
+    height: inherit !important;
+    display: block;
+  }
+  .qodef-portfolio-slider-holder .qodef-portfolio-list-holder .qodef-pli-image {
+    display: none;
+  }
+  .qodef-portfolio-slider-holder .qodef-portfolio-list-holder .qodef-ps-fh-image {
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-portfolio-slider-holder .qodef-portfolio-list-holder article .qodef-pli-image {
+    width: 190%;
+  }
+  .qodef-portfolio-slider-holder .qodef-portfolio-list-holder article .qodef-pli-text {
+    padding: 37px 70px 43px 40px !important;
+  }
+  .qodef-portfolio-slider-holder .qodef-portfolio-list-holder article .qodef-pli-text .qodef-pli-title {
+    font-size: 30px;
+    width: 80%;
+  }
+}
+
+/* ==========================================================================
+   Portfolio Slider shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Portfolio Stack Slider shortcode responsive style - begin
+   ========================================================================== */
+@media (min-width: 1921px) {
+  .qodef-portfolio-stack-slider-holder .qodef-stack-slider .qodef-stack-slide img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-stack-slider-holder .qodef-stack-slider .qodef-stack-slide img {
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-height: 646px) {
+  .qodef-portfolio-stack-slider-holder .qodef-portfolio-list-holder.qodef-pl-stack-slider .qodef-stack-slider .qodef-stack-slide img {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-portfolio-stack-slider-holder .qodef-stack-slider .qodef-stack-slide img {
+    max-width: inherit;
+    width: 250%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-portfolio-stack-slider-holder .qodef-stack-slider .qodef-stack-slide img {
+    max-width: inherit;
+  }
+  .qodef-portfolio-stack-slider-holder .qodef-info-box {
+    padding: 17px 45px 13px;
+    width: 100%;
+  }
+  .qodef-portfolio-stack-slider-holder .qodef-info-box .qodef-pli-title {
+    font-size: 30px;
+    width: 80%;
+  }
+}
+
+/* ==========================================================================
+   Portfolio Stack Slider shortcode responsive style - end
+   ========================================================================== */
+@media only screen and (max-width: 680px) {
+  .qodef-testimonials-holder.qodef-testimonials-image-pagination .qodef-testimonials-image-pagination-inner {
+    padding: 0 10px 0 30%;
+    box-sizing: border-box;
+  }
+  .qodef-testimonials-holder.qodef-testimonials-image-pagination .qodef-testimonials-image-pagination-inner .qodef-testimonial-text {
+    font-size: 15px;
+    line-height: 27px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-testimonials-holder .qodef-owl-slider .owl-nav .owl-next,
+  .qodef-testimonials-holder .qodef-owl-slider .owl-nav .owl-prev {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=../../../../plugins/dessau-core/assets/css/custom-post-types-map-responsive.css.map */

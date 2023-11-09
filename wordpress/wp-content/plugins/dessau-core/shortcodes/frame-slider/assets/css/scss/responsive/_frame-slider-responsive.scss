@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Frame Slider shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-large {
+
+	.qodef-frame-slider-holder  {
+	    transform: scale(0.9);
+	}
+}
+
+@include ipad-landscape {
+	.qodef-frame-slider-holder  {
+	 	
+	 	.qodef-fs-inner {
+ 		    left: 145px;
+	 	}   
+	}
+}
+
+@include ipad-portrait {
+	.qodef-frame-slider-holder  {
+	 	
+	 	.qodef-fs-inner {
+	 		height: 350px;
+	 		width: 617px;
+ 		    top: 5.2%;
+ 		    left: 76px;
+ 		    padding-left: 0;
+	 	}   
+	}
+}
+
+@include phone-landscape {
+	
+	.qodef-frame-slider-holder {
+
+		.qodef-fs-inner {
+			height: 303px;
+			width: 536px;
+			left: 66px;
+		}
+	}
+}
+
+@include phone-portrait {
+
+	.qodef-frame-slider-holder {
+
+		.qodef-fs-inner {
+			height: 217px;
+			width: 384px;
+			top: 3.2%;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+
+	.qodef-frame-slider-holder {
+		height: 357px;
+
+		.qodef-fs-inner {
+			height: 197px;
+		    width: 339px;
+		    top: 4%;
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	
+	.qodef-frame-slider-holder {
+
+		.qodef-fs-inner {
+			height: 175px;
+			width: 301px;
+			left: 37px;
+		}
+	}
+}
+
+@include smaller-phone-portrait {
+	.qodef-frame-slider-holder {
+
+		.qodef-fs-inner {
+			height: 149px;
+			width: 256px;
+			padding-left: 0;
+			top: 2.2%;
+		}
+	}
+}
+/* ==========================================================================
+   Frame Slider shortcode responsive style - end
+   ========================================================================== */

@@ -1,0 +1,27 @@
+.qodef-portfolio-list-holder {
+    .qodef-pl-filter-holder {
+        @include phone-landscape {
+            margin-bottom: 50px;
+        }
+    }
+
+    &.qodef-pl-gallery-overlay {
+
+    	&.qodef-portfolio-mc-holder {
+
+    		.qodef-pl-item {
+    			
+	    		.qodef-pli-text-holder {
+
+	    			@media (max-width: 1279px) {
+						height: 100%;
+						width: 100%;
+						left: 0;
+						top: 0;
+	    			}
+	    		}
+    		}
+    	}
+    }
+    	
+}

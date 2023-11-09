@@ -1,0 +1,4 @@
+[09-Jan-2023 23:33:34 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function dessau_select_get_archive_blog_list_layout() in /home/meyzjcmc/public_html/vonproy/wp-content/themes/dessau/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/meyzjcmc/public_html/vonproy/wp-content/themes/dessau/index.php on line 2

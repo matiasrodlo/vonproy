@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Portfolio Single page style - begin
+   ========================================================================== */
+
+.qodef-portfolio-single-holder {
+	@include qodefRelativeHolderLayout();
+	margin: 0 0 50px;
+	
+	&.qodef-ps-full-width-custom-layout{
+		margin: 0;
+	}
+
+	.qodef-ps-title {
+		margin-bottom: 13px;
+	}
+	
+    .qodef-ps-image-holder {
+	    @include qodefRelativeHolderLayout();
+	    
+	    .qodef-ps-image {
+		    
+		    &:not(.qodef-item-space) {
+			    @include qodefRelativeHolderLayout();
+			    box-sizing: border-box;
+		    }
+		    
+		    a, img {
+			    position: relative;
+			    display: block;
+		    }
+	    }
+    }
+	
+	.qodef-ps-info-holder {
+		@include qodefRelativeHolderLayout();
+
+		&:not(.qodef-ps-info-sticky-holder){
+			margin-top: 22px;
+		}
+
+		.qodef-ps-title {
+			margin: 0 0 13px;
+		}
+
+		> .vc_row {
+			padding-bottom: 38px;
+		}
+		
+		.qodef-ps-info-item {
+			@include qodefRelativeHolderLayout();
+			margin: 0 0 8px;
+			
+			p, a {
+				margin: 0;
+				display: inline-block;
+			}
+
+			&.qodef-ps-content-item{
+				>h3{
+					margin-top: 0;
+				}
+			}
+
+
+		}
+		
+		.qodef-ps-info-title {
+			margin: 0 10px 0 0;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+	}
+}
+
+/* ==========================================================================
+   Portfolio Single page style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio Single page specific style for types - begin
+   ========================================================================== */
+
+.qodef-portfolio-single-holder {
+	
+	.qodef-ps-image-holder {
+		
+		&.qodef-grid-masonry-list {
+			
+			.qodef-ps-image {
+				
+				a {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single page specific style for types - end
+   ========================================================================== */

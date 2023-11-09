@@ -1,0 +1,4 @@
+[24-Mar-2022 21:44:45 America/New_York] PHP Fatal error:  Uncaught Error: Class 'ParagonIE_Sodium_Core32_Curve25519' not found in /home/meyzjcmc/public_html/vonproy/wp-includes/sodium_compat/src/Core32/Ed25519.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/meyzjcmc/public_html/vonproy/wp-includes/sodium_compat/src/Core32/Ed25519.php on line 10

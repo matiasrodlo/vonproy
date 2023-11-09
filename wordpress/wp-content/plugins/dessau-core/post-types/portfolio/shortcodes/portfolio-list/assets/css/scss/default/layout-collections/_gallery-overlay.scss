@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+	
+	&.qodef-pl-gallery-overlay {
+
+		&.qodef-portfolio-mc-holder {
+
+			.qodef-pli-text-holder {
+				height: calc(100% - 8px);
+				width: calc(100% - 8px);
+				left: 4px;
+				top: 4px;
+			}
+		}
+		
+		&.qodef-pl-has-shadow {
+			
+			.qodef-pl-item-inner {
+				box-shadow: $default-box-shadow;
+			}
+		}
+		
+		article {
+			
+			&:hover {
+				
+				.qodef-pli-text-holder {
+					opacity: 1;
+				}
+			}
+			
+			.qodef-pl-item-inner {
+				overflow: hidden;
+			}
+
+			.qodef-pli-link {
+				cursor: url('../img/cursor-plus-light.png'), auto;
+			}
+			
+			.qodef-pli-text {
+				
+				.qodef-pli-title,
+				.qodef-pli-excerpt {
+					color: #fff;
+				}
+				
+				.qodef-pli-category-holder {
+					
+					a {
+						color: #fff;
+						
+						&:hover {
+							color: $first-main-color;
+						}
+					}
+				}
+			}
+		}
+		
+		.qodef-pli-text-holder {
+			@include qodefAbsoluteHolderLayout();
+			padding: 20px;
+			background-color: rgba($default-text-color, 0.6);
+			opacity: 0;
+			text-align: center;
+			box-sizing: border-box;
+			@include qodefTransition(opacity .2s ease-in-out);
+			left: 0;
+			top: 0;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Overlay style - end
+   ========================================================================== */

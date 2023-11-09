@@ -1,0 +1,27 @@
+.qodef-testimonials-holder {
+
+    &.qodef-testimonials-image-pagination {
+
+        @include phone-landscape {
+
+            .qodef-testimonials-image-pagination-inner {
+                padding: 0 10px 0 30%;
+                box-sizing: border-box;
+
+                .qodef-testimonial-text {
+                    font-size: 15px;
+                    line-height: 27px;
+                }
+
+            }
+
+        }
+    }
+
+    @include phone-portrait {
+        .qodef-owl-slider .owl-nav .owl-next,
+        .qodef-owl-slider .owl-nav .owl-prev {
+            display: none;
+        }
+    }
+}

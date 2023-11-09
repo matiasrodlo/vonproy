@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Section Title shortcode responsive styles - begin
+   ========================================================================== */
+@include ipad-portrait {
+	
+	.qodef-section-title-holder {
+		padding: 0 !important; // it can be set inline in shortcode options
+
+		&.qodef-st-corners {
+			padding: 30px 10px 33px !important;
+		}
+		
+		&.qodef-st-two-columns {
+			
+			.qodef-st-title,
+			.qodef-st-text {
+				width: 100%;
+				float: none !important;
+				text-align: initial !important;
+			}
+			
+			.qodef-st-text {
+				margin: 14px 0 0;
+			}
+		}
+		
+		&.qodef-st-disable-title-break {
+			
+			.qodef-st-title {
+				
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+
+	.qodef-section-title-holder {
+		&.qodef-st-corners {
+			padding: 30px 20px 33px !important;
+		}
+	}
+}
+/* ==========================================================================
+   Section Title shortcode responsive styles - end
+   ========================================================================== */
+
+

@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Slide Up style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+
+    &.qodef-pl-gallery-slide-up{
+
+        article {
+            .qodef-pli-link {
+                z-index: 20;
+            }
+
+            .qodef-pli-text-holder{
+                display: block;
+                width: 100%;
+            }
+
+            .qodef-pli-text-wrapper{
+                width: auto;
+                @include qodefTransition(.4s ease-in-out);
+                @include qodefTransform(translateY(-200%));
+            }
+
+            .qodef-pli-text {
+                text-align: left;
+                vertical-align: bottom;
+                padding: 10px;
+
+                .qodef-pli-title{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .qodef-pli-category-holder {
+                    display: block;
+                    margin: 0;
+
+                    a {
+                        color: #000;
+
+                        &:hover {
+                            color: $first-main-color;
+                        }
+                    }
+                }
+
+                .qodef-pli-excerpt{
+                    opacity: 0;
+                    @include qodefTransition(all .2s ease);
+                    margin-top: 8px;
+                }
+            }
+
+            .qodef-pli-image {
+                img {
+                    -webkit-clip-path: inset(0px 0px 0px 0px);
+                    clip-path: inset(0px 0px 0px 0px);
+                }
+            }
+
+            &:hover {
+                .qodef-pli-text-holder, .qodef-pli-text-wrapper {
+                    @include qodefTransform(translateY(0));
+                }
+                .qodef-pli-text{
+                    .qodef-pli-excerpt {
+                        opacity: 1;
+                        @include qodefTransition(all .2s ease, .1s);
+                    }
+                }
+            }
+        }
+
+        .qodef-pli-text-holder {
+            height: auto;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 20px 0 15px;
+            overflow: hidden;
+            @include qodefTransitionTransform(.4s ease-in-out);
+            @include qodefTransform(translateY(100%));
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Slide Up style - end
+   ========================================================================== */

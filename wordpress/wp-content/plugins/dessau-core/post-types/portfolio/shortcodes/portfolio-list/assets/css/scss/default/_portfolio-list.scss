@@ -1,0 +1,463 @@
+/* ==========================================================================
+   Portfolio shortcode style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+    @include qodefRelativeHolderLayout();
+
+	/***** Article Global Style - begin *****/
+
+    article {
+
+	    .touch & {
+		    cursor: pointer;
+	    }
+
+		&.qodef-pl-item {
+			&.qodef-pl-title-item {
+				.qodef-pl-item-inner {
+					display: table;
+					width: 100%;
+					height: 100%;
+
+					.qodef-pl-item-inner-wrapper {
+						display: table-cell;
+						vertical-align: middle;
+                        text-align: center;
+
+                        > * {
+                            display: inline-block;
+                            text-align: left;
+                        }
+					}
+				}
+			}
+		}
+
+	    .qodef-pl-item-inner {
+		    @include qodefRelativeHolderLayout();
+	    }
+	    
+	    .qodef-pli-image {
+		    @include qodefRelativeHolderLayout();
+		    
+		    img {
+			    display: block;
+			    width: 100%;
+		    }
+	    }
+
+	    .qodef-pli-link {
+		    @include qodefAbsoluteHolderLayout();
+	    }
+
+	    .qodef-pli-text-wrapper {
+	        @include qodefTableLayout();
+	    }
+
+	    .qodef-pli-text {
+		    @include qodefTableCellLayout();
+
+		    .qodef-pli-title {
+				margin: 0;
+		    }
+
+		    .qodef-pli-category-holder {
+			    position: relative;
+			    display: block;
+			    margin: 2px 0 0;
+				line-height: 1em;
+
+			    a {
+				    position: relative;
+				    display: inline-block;
+				    vertical-align: middle;
+				    padding: 0 6px 0 0;
+				    margin: 0 3px 0 0;
+				    z-index: 8;
+				    
+				    &:after {
+					    position: absolute;
+					    top: 0;
+					    right: -4px;
+					    content: '/';
+					    color: inherit;
+					    font-size: 12px;
+					    line-height: inherit;
+				    }
+
+				    &:last-child {
+					    margin: 0;
+					    padding: 0;
+					    
+					    &:after {
+						    display: none;
+					    }
+				    }
+			    }
+		    }
+
+		    .qodef-pli-excerpt {
+			    margin: 3px 0 0;
+		    }
+	    }
+    }
+
+	/***** Article Global Style - end *****/
+	
+	/***** Specific Global Style - begin *****/
+	
+	&.qodef-pl-has-shadow {
+		
+		article {
+			
+			.qodef-pli-image {
+				box-shadow: $default-box-shadow;
+			}
+		}
+	}
+	
+	&.qodef-pl-has-filter {
+		
+		.qodef-pl-inner {
+			overflow: hidden;
+		}
+	}
+	
+	&.qodef-pl-no-content {
+		
+		.qodef-pli-text-holder {
+			display: none;
+		}
+	}
+	/***** Specific Global Style - end *****/
+	
+	&.qodef-pl-masonry {
+
+        &.qodef-fixed-masonry-items {
+	        
+            article {
+	            
+                .qodef-pl-item-inner,
+                .qodef-pli-image {
+		            height: 100%;
+	            }
+            }
+        }
+	}
+
+	&.qodef-scattered-images{
+
+		article{
+			text-align: center;
+			padding-bottom: 35px;
+
+			&:nth-of-type(2) {
+				margin-top: 40px;
+			}
+
+			&:nth-of-type(2n) {
+				text-align: right;
+			}
+
+			&:nth-of-type(4n) {
+				text-align: left;
+			}
+
+			.qodef-pl-item-inner,
+			.qodef-pli-image{
+				width: auto;
+			}
+
+
+			.qodef-pli-text-holder{
+				text-align: left;
+				padding-right: 20px;
+				padding-left:  20px;
+			}
+
+			.qodef-pli-excerpt {
+				max-width: 350px;
+			}
+		}
+
+		&.qodef-pl-three-columns,
+		&.qodef-pl-four-columns{
+			article:nth-of-type(3){
+				margin-top: 80px;
+			}
+		}
+
+		&.qodef-pl-five-columns{
+			article:nth-of-type(3),
+			article:nth-of-type(5){
+				margin-top: 80px;
+			}
+		}
+
+		&.qodef-no-space {
+			article {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	/***** Portfolio Types - end *****/
+
+	/***** Additional Features - begin *****/
+
+	&.qodef-pl-has-animation {
+
+		article {
+			opacity: 0;
+			@include qodefTransform(translateY(80px));
+			@include qodefTransition(opacity .8s cubic-bezier(0.34, 0.52, 0.57, 1.04), transform .8s cubic-bezier(0.34, 0.52, 0.57, 1.04));
+
+			&.qodef-item-show {
+				opacity: 1;
+				@include qodefTransform(translateY(0));
+
+				&.qodef-item-shown {
+					@include qodefTransition(none);
+				}
+			}
+			
+			.touch & {
+				opacity: 1;
+				@include qodefTransform(translateY(0));
+			}
+		}
+	}
+
+	/***** Additional Features - end *****/
+}
+
+/* ==========================================================================
+   Portfolio shortcode style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio filter style - begin
+   ========================================================================== */
+
+.qodef-pl-filter-holder {
+    @include qodefRelativeHolderLayout();
+    margin: 0 0 20px;
+    text-align: center;
+
+	.qodef-pl-filter-parent{
+		font-family: $default-heading-font;
+		font-size: 13px;
+		font-weight: 500;
+		letter-spacing: 0.025em;
+		padding-bottom: 2px	;
+	}
+
+	.qodef-pl-filter-child {
+		margin-bottom: 33px;
+	}
+	
+	.qodef-pl-filter-child-categories {
+		display: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+
+    ul {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 0 10px;
+	        padding: 0 19px;
+            cursor: pointer;
+			font-size: 13px;
+	        
+	        @include laptop-landscape-large {
+		        padding: 0 16px;
+	        }
+	
+	        @include ipad-landscape {
+		        padding: 0 10px;
+	        }
+
+            span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                color: $default-text-color;
+                line-height: 23px;
+                white-space: nowrap;
+                @include qodefTransition(color .2s ease-out);
+            }
+
+            &.qodef-pl-current,
+            &:hover {
+
+                span {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio filter style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio standard pagination style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+	
+	&.qodef-pl-pag-standard {
+		
+		.qodef-pl-inner {
+			opacity: 1;
+			@include qodefTransition(opacity .2s ease-out);
+		}
+		
+		&.qodef-pl-pag-standard-animate {
+			
+			.qodef-pl-inner {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.qodef-pl-standard-pagination {
+	@include qodefRelativeHolderLayout();
+	margin: 40px 0 0;
+	clear: both;
+	
+	ul {
+		@include qodefRelativeHolderLayout();
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		text-align: center;
+		
+		li {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 12px;
+			padding: 0;
+			
+			a {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0;
+				padding: 0;
+			}
+			
+			&.qodef-pl-pag-active {
+				
+				a {
+					color: $first-main-color;
+				}
+			}
+			
+			&.qodef-pl-pag-prev,
+			&.qodef-pl-pag-next {
+				position: absolute;
+				top: 0;
+				
+				a {
+					font-size: 30px;
+					@include qodefTransition(color .2s ease-out, opacity .2s ease-out);
+					
+					span {
+						display: block;
+						line-height: inherit;
+						
+						&:before {
+							display: block;
+							line-height: inherit;
+						}
+					}
+				}
+			}
+			
+			&.qodef-pl-pag-prev {
+				left: 0;
+				
+				a {
+					opacity: 0;
+				}
+			}
+			
+			&.qodef-pl-pag-next {
+				right: 0;
+				
+				a {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio standard pagination style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio load more pagination style - begin
+   ========================================================================== */
+
+.qodef-pl-load-more-holder {
+	@include qodefRelativeHolderLayout();
+
+    .qodef-pl-load-more {
+	    margin: 60px 0 0;
+	    text-align: center;
+    }
+}
+/* ==========================================================================
+   Portfolio load more pagination style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio loading element style - begin
+   ========================================================================== */
+
+.qodef-pl-loading {
+	position: relative;
+	display: none;
+	text-align: center;
+
+	&.qodef-filter-trigger {
+		position: absolute;
+		top: 250px;
+		left: 0;
+	}
+	
+    &.qodef-standard-pag-trigger {
+		position: absolute;
+		top: 50px;
+		left: 0;
+	
+	    .qodef-pl-has-filter & {
+		    top: 150px;
+	    }
+    }
+
+	&.qodef-showing {
+		display: block;
+	}
+}
+
+/* ==========================================================================
+   Portfolio loading element style - end
+   ========================================================================== */

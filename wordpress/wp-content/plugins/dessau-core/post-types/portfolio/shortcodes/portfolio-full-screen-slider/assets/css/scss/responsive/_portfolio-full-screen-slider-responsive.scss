@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Portfolio Full Screen Slider shortcode responsive style - begin
+   ========================================================================== */
+.qodef-portfolio-full-screen-slider-holder {
+	
+	@include laptop-landscape-large {
+
+		#qodef-ptf-info-block {
+
+			.qodef-pli-text-holder {
+				height: 95%;
+			}
+
+			.qodef-pli-text {
+				padding-bottom: 28px;
+				vertical-align: bottom;
+				padding-top: 60px !important;
+			}
+		}
+	}
+
+	@include ipad-landscape {
+		#qodef-ptf-info-block.qodef-active {
+			width: 70%;
+		}
+	}
+
+	@include ipad-portrait {
+		#qodef-ptf-info-block.qodef-active {
+			width: 100%;
+		}
+	}
+	
+	@include phone-landscape {
+		
+		#qodef-ptf-info-block {
+			max-width: 100%;
+			min-height: 200px;
+			max-height: 200px;
+
+			&.qodef-active {
+				max-height: calc(100% - 69px);
+
+				.qodef-pli-text {
+					padding-top: 55px !important;
+					padding-bottom: 65px;
+				}
+			}
+
+			.qodef-pli-text {
+				padding: 59px 10px 0 20px;
+			}
+
+			.qodef-pli-info-holder .qodef-pli-info {
+				width: 100%;
+				padding-left: 0 !important;
+				border: none !important;
+			}
+
+			.qodef-pli-excerpt {
+				display: none;
+			}
+		}
+
+		.swiper-pagination {
+			display: none;
+		}
+
+		.qodef-prev,
+		.qodef-next {
+			display: none;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Full Screen Slider shortcode responsive style - end
+   ========================================================================== */

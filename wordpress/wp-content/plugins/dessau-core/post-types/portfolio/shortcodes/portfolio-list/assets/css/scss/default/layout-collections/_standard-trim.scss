@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Portfolio Item Layout - Standard Trim style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+
+    &.qodef-pl-standard-trim {
+
+        article {
+            .qodef-pli-link {
+                z-index: 20;
+            }
+
+            .qodef-pli-text-holder{
+                display: block;
+                width: auto;
+                @include qodefTransform(translateY(0));
+                @include qodefTransition(.4s);
+            }
+
+            .qodef-pli-text-wrapper{
+                width: auto;
+            }
+
+            .qodef-pli-text {
+                text-align: left;
+                vertical-align: bottom;
+
+                .qodef-pli-title{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .qodef-pli-category-holder {
+                    display: block;
+                    margin: 0;
+
+                    a {
+                        color: #000;
+
+                        &:hover {
+                            color: $first-main-color;
+                        }
+                    }
+                }
+
+                .qodef-pli-excerpt{
+                    opacity: 0;
+                    @include qodefTransition(.2s);
+                    margin-top: 11px;
+                }
+            }
+
+            .qodef-pli-image {
+                img {
+                    -webkit-clip-path: inset(0px 0px 0px 0px);
+                    clip-path: inset(0px 0px 0px 0px);
+                }
+            }
+
+            &:hover {
+                .qodef-pli-text-holder{
+                    @include qodefTransform(translateY(-45%));
+                }
+                .qodef-pli-text{
+                    .qodef-pli-excerpt {
+                        opacity: 1;
+                        @include qodefTransition(.4s .2s);
+                    }
+                }
+            }
+        }
+
+        .qodef-pli-text-holder {
+            @include qodefRelativeHolderLayout();
+            background-color: #fff;
+            padding: 33px 0;
+            @include qodefTransition(all .2s ease);
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio Item Layout - Standard Trim style - end
+   ========================================================================== */

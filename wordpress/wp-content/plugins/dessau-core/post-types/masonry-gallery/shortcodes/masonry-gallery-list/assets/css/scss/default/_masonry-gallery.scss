@@ -1,0 +1,224 @@
+/* ==========================================================================
+   Masonry Gallery shortcodes style - begin
+   ========================================================================== */
+
+.qodef-masonry-gallery-holder {
+	@include qodefRelativeHolderLayout();
+	
+	.qodef-mg-inner {
+		opacity: 0;
+	}
+	
+	.qodef-mg-grid-gutter {
+		width: 0;
+	}
+	
+	.qodef-mg-grid-sizer {
+		width: 25%;
+	}
+
+	.qodef-mg-item {
+		position: relative;
+		width: 25%;
+		z-index: 1;
+		box-sizing: border-box;
+
+		&.qodef-masonry-size-large-width {
+			width: 50%;
+
+			.qodef-mg-image {
+				
+				img {
+					max-height: inherit;
+				}
+			}
+		}
+
+		&.qodef-masonry-size-large-height {
+			
+			.qodef-mg-image {
+				
+				img {
+					max-width: inherit;
+					width: auto;
+					height: 100%;
+				}
+			}
+		}
+		
+		&.qodef-masonry-size-large-width-height {
+			width: 50%;
+		}
+		
+		.qodef-mg-content {
+			@include qodefRelativeHolderLayout();
+			height: 100%;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+		
+		.qodef-mg-item-outer {
+			@include qodefAbsoluteHolderLayout();
+			text-align: left;
+			box-sizing: border-box;
+		}
+		
+		.qodef-mg-item-inner {
+			@include qodefTableLayout();
+		}
+		
+		.qodef-mg-item-content {
+			@include qodefTableCellLayout();
+			padding: 38px 31px;
+			vertical-align: top;
+		}
+
+		.qodef-mg-image {
+			position: relative;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			@include qodefTransform(translateZ(0));
+			@include qodefTransitionTransform(.7s);
+			backface-visibility: hidden;
+		}
+		
+		.qodef-mg-image-overlay {
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			height: calc(100% + 10px);
+			width: calc(100% + 10px);
+			background-size: cover;
+			background-position: top left;
+			z-index: -1;
+		}
+		
+		.qodef-mg-item-icon {
+			margin: 0 0 1px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include qodefTransform(translate(-50%, -50%));
+		}
+		
+		.qodef-mg-item-title {
+			margin: 0;
+		}
+		
+		.qodef-mg-item-text {
+			margin: 14px 0 0;
+		}
+		
+		.qodef-mg-item-link {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+		}
+
+		.qodef-mg-item-inner-text{
+			position: absolute;
+			bottom: 38px;
+			padding-right: 30px;
+		}
+		
+		&.qodef-mg-standard {
+			
+			.qodef-mg-item-inner {
+				opacity: 0;
+				@include qodefTransition(.4s);
+			}
+			
+			.qodef-mg-item-title,
+			.qodef-mg-item-text {
+				color: #fff;
+			}
+			
+			img {
+				@include qodefTransition(opacity .7s ease);
+				@include qodefTransform(translateZ(0));
+			}
+			
+			&:hover {
+				
+				.qodef-mg-item-inner {
+					opacity: 1;
+					background-color: rgba($default-text-color, 0.4);
+				}
+
+				.qodef-mg-image {
+					@include qodefTransform(scale(1.03));
+				}
+				
+				img {
+					opacity: 0;
+				}
+			}
+		}
+
+		&.qodef-mg-simple {
+			
+			&.qodef-mg-skin-light {
+				
+				.qodef-mg-item-inner {
+					background-color: #fff;
+				}
+			}
+			
+			&.qodef-mg-skin-dark {
+				
+				.qodef-mg-item-inner {
+					background-color: $additional-dark-color;
+				}
+				
+				.qodef-mg-item-title,
+				.qodef-mg-item-text {
+					color: #fff;
+				}
+			}
+
+			.qodef-mg-item-icon ~ .qodef-mg-item-title{
+				display: none !important;
+			}
+		}
+
+		&.qodef-mg-with-button{
+			.qodef-mg-item-content{
+				background-color: #363636;
+				text-align: left;
+				vertical-align: top;
+				padding: 38px 31px;
+
+				.qodef-mg-item-title,
+				.qodef-mg-item-text{
+					color: #fff;
+				}
+
+				.qodef-btn.qodef-btn-dessau{
+					margin-top: 15px;
+					margin-bottom: 8px;
+
+					.qodef-btn-plus{
+						background-color: #fff;
+
+						.qodef-btn-line-1::before,
+						.qodef-btn-line-2::before {
+							background-color: $default-text-color;
+						}
+
+						&:hover {
+							@include qodefTransform(rotate(-90deg));
+							top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Masonry Gallery shortcodes style - end
+   ========================================================================== */

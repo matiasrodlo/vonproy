@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Team shortcode style - begin
+   ========================================================================== */
+
+.qodef-team-holder {
+    @include qodefRelativeHolderLayout();
+	
+	&.qodef-team-info-on-image {
+		
+		.touch & {
+			cursor: pointer;
+		}
+
+		&:hover {
+
+			.qodef-team-social-inner {
+				@include qodefTransform(translate3d(0,0,0));
+			}
+		}
+
+		.qodef-team-image {
+			overflow: hidden;
+		}
+
+		.qodef-team-social-inner{
+			padding: 40px 25px 20px;
+			text-align: left;
+			bottom: 0;
+			position: absolute;
+			display: block;
+			background-color: #fff;
+			height: auto;
+			box-sizing: border-box;
+		}
+		
+		.qodef-team-social-holder {
+			margin: 7px 0 0;
+		}
+	}
+
+    .qodef-team-image {
+        @include qodefRelativeHolderLayout();
+
+        img {
+            display: block;
+        }
+    }
+	
+	.qodef-team-info {
+		@include qodefRelativeHolderLayout();
+		margin: 18px 0 0;
+		text-align: left;
+	}
+
+    .qodef-team-name {
+        margin: 0;
+    }
+
+    .qodef-team-position {
+        margin: 1px 0 0;
+    }
+	
+	.qodef-team-text {
+		margin: 2px 0 0;
+	}
+	
+	.qodef-team-social-wrapper {
+		@include qodefAbsoluteHolderLayout();
+		z-index: 1;
+		@include qodefTransform(translateZ(0));
+		@include qodefTransition( all .3s ease);
+	}
+	
+	.qodef-team-social-outer {
+		@include qodefTableLayout();
+		bottom: -1px;
+		@include qodefTransform(scale(1.0001));
+	}
+	
+	.qodef-team-social-inner {
+		position: relative;
+		display: table-cell;
+		height: 100%;
+		width: 100%;
+		padding: 20px 40px 33px;
+		vertical-align: bottom;
+		@include qodefTransform(translate3d(0,100%,0));
+		@include qodefTransition(all .4s ease);
+	}
+	
+	.qodef-team-social-holder {
+		@include qodefRelativeHolderLayout();
+		margin: 9px 0 0;
+		
+		.qodef-team-icon {
+			font-size: 14px;
+			margin: 0 12px 0 0;
+			color: #858585;
+
+			a{
+				color: #858585;
+
+				&:hover{
+					color: #cfcfcf;
+				}
+			}
+			
+			.qodef-icon-element {
+				font-size: inherit;
+				@include qodefTransition(none);
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Team shortcode style - end
+   ========================================================================== */

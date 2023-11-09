@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Frame Slider shortcode style - begin
+   ========================================================================== */
+
+.qodef-frame-slider-holder {
+	@include qodefRelativeHolderLayout();
+	margin: 0 auto;
+	margin-bottom: 75px;
+    height: 505px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	
+	.qodef-fs-device {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		height: 100%;
+		width: 100%;
+		background: url('img/frame-slider-laptop.png') top center no-repeat;
+		background-size: contain;
+		z-index: 2;
+		pointer-events: none;
+		@include qodefTransform(translateX(-50%));
+	}
+
+	.qodef-fs-inner {
+		position: absolute;
+		top: 7.1%;
+	    height: 410px;
+	    width: 730px;
+	    padding-left: 3px;
+	}
+
+    .qodef-fs-slides {
+	    @include qodefRelativeHolderLayout();
+	    cursor: -webkit-grab;
+	    visibility: hidden;
+	    
+	    a, img {
+		    display: block;
+	    }
+    }
+
+    .owl-dots {
+    	display: block;
+	    width: 100%;
+	    margin-top: 73px;
+	    z-index: 123;
+    }
+}
+/* ==========================================================================
+   Frame Slider shortcode style - end
+   ========================================================================== */

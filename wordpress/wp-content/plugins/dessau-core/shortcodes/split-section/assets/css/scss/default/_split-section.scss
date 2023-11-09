@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Split Section styles - begin
+   ========================================================================== */
+
+.qodef-ss-holder {
+	@include qodefRelativeHolderLayout();
+
+	&.qodef-ss-image-right {
+		
+		.qodef-ss-image {
+			left: 50%;
+		}
+
+		.qodef-ss-content {
+			left: 0;
+		}
+	}
+	
+	.qodef-ss-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		
+		img {
+			display: none
+		}
+	}
+
+	.qodef-ss-content {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		left: 50%;
+		width: 50%;
+		padding: 30px;
+		box-sizing: border-box;
+	}
+	
+	.qodef-ss-title {
+		margin: 0;
+	}
+	
+	.qodef-ss-text {
+		margin: 14px 0 0;
+	}
+	
+	.qodef-ss-link {
+		margin: 25px 0 0;
+	}
+}
+/* ==========================================================================
+   Split Section styles - end
+   ========================================================================== */

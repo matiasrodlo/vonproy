@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Portfolio Single page responsive style - begin
+   ========================================================================== */
+
+.qodef-portfolio-single-holder {
+	
+    .qodef-ps-image-holder {
+	    
+	    &.qodef-ps-gallery-images {
+		
+		    @include phone-landscape {
+			
+			    .qodef-ps-image {
+				    width: 100% !important; // !important is set to override all other stronger selectors
+			    }
+		    }
+		
+		    /***** Columns Layout - end *****/
+	    }
+    }
+
+	.qodef-ps-info-holder{
+		.qodef-ps-title {
+			@include ipad-landscape {
+				margin-top: 20px;
+			}
+		}
+		&:not(.qodef-ps-info-sticky-holder) {
+			@include ipad-landscape {
+				margin-top: 38px !important;
+			}
+		}
+	}
+
+	&.qodef-ps-small-gallery-layout {
+		.qodef-ps-info-holder {
+			&:not(.qodef-ps-info-sticky-holder) {
+				@include ipad-landscape {
+					margin-top: 23px !important;
+				}
+			}
+		}
+	}
+	@include ipad-landscape {
+		
+		.qodef-ps-info-holder {
+			margin: 23px 0 0 !important; // can be set inline in option
+		}
+	}
+
+	@include phone-landscape {
+		.qodef-ps-navigation {
+			.qodef-ps-nav-title,
+			img {
+				display: none;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single page responsive style - end
+   ========================================================================== */

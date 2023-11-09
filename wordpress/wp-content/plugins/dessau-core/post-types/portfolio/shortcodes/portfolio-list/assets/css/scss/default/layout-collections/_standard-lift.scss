@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Portfolio Item Layout - Standard Lift style - begin
+   ========================================================================== */
+
+.qodef-portfolio-list-holder {
+	
+	&.qodef-pl-standard-lift {
+		
+		article {
+			
+			&:hover {
+				
+				.qodef-pli-image {
+					@include qodefTransform(translateY(-4px));
+				}
+			}
+			
+			.qodef-pli-image {
+				@include qodefTransition(.5s);
+			}
+			
+			.qodef-pli-link {
+				z-index: 2;
+			}
+		}
+		
+		.qodef-pli-text-holder {
+			@include qodefRelativeHolderLayout();
+			margin: 17px 0 0;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Standard Lift style - end
+   ========================================================================== */

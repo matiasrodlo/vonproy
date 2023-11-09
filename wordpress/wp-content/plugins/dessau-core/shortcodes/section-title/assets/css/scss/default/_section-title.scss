@@ -1,0 +1,242 @@
+/* ==========================================================================
+   Section Title shortcode styles - begin
+   ========================================================================== */
+
+.qodef-section-title-holder {
+    @include qodefRelativeHolderLayout();
+	box-sizing: border-box;
+	padding: 30px 55px 33px;
+
+	&.qodef-st-corners{
+
+		.qodef-corner-line{
+			&:before{
+				content: '';
+				background-color: #000;
+				position: absolute;
+			}
+
+			&.line-1,
+			&.line-3{
+				&:before{
+					height: 13px;
+					width: 1px;
+				}
+			}
+
+			&.line-1,
+			&.line-2{
+				&:before{
+					left: 0;
+					top: 0;
+				}
+			}
+
+			&.line-3,
+			&.line-4{
+				&:before{
+					right: 0;
+					bottom: 0;
+				}
+			}
+
+			&.line-2,
+			&.line-4{
+				&:before{
+					height: 1px;
+					width: 13px;
+				}
+			}
+		}
+
+		&.qodef-st-light-skin{
+			.qodef-corner-line {
+				&:before {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+	
+	&.qodef-st-two-columns {
+		
+		$space_label: ('tiny', 'small', 'normal');
+		$space_width: (5, 10, 15);
+		
+		@for $i from 0 to length($space_label) {
+			&.qodef-st-#{nth($space_label,$i+1)}-space {
+				$column_width: nth($space_width,$i+1);
+				
+				.qodef-st-inner {
+					margin: 0 -#{$column_width}px;
+				}
+			
+				.qodef-st-title,
+				.qodef-st-text {
+					padding: 0 #{$column_width}px;
+				}
+			}
+		}
+		
+		.qodef-st-title,
+		.qodef-st-text {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			width: 50%;
+			float: left;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		
+		&.qodef-st-title-left {
+			
+			.qodef-st-title {
+				text-align: right;
+			}
+			
+			.qodef-st-text {
+				text-align: left;
+			}
+		}
+		
+		&.qodef-st-title-right {
+			
+			.qodef-st-title {
+				float: right;
+				text-align: left;
+			}
+			
+			.qodef-st-text {
+				text-align: right;
+			}
+		}
+	}
+	
+    .qodef-st-title {
+	    display: block;
+        margin: 0;
+	    
+	    .qodef-st-title-bold {
+		    font-weight: 700;
+	    }
+	    
+	    .qodef-st-title-light {
+		    font-weight: 300;
+	    }
+    }
+    
+    .qodef-st-text {
+	    display: block;
+        margin: 19px 0 0;
+		font-size: 18px;
+		line-height: 30px;
+    }
+
+	p.qodef-st-text {
+		font-size: inherit;
+		line-height: inherit;
+	}
+
+	.no-touch & {
+
+		.qodef-st-title, .qodef-st-text {
+			opacity: 0;
+			@include qodefTransform(translateY(10px));
+		}
+
+		&.qodef-st-corners{
+			.qodef-corner-line{
+
+				&.line-1,
+				&.line-3{
+					&:before{
+						height: 100%;
+						width: 100%;
+					    background-color: transparent;
+					}
+				}
+
+				&.line-3,
+				&.line-4{
+					&:before{
+						right: 0;
+						bottom: 0;
+					}
+				}
+
+				&.line-2,
+				&.line-4{
+					&:before{
+						background-color: transparent;
+					}
+				}
+			}
+		}
+
+		&.qodef-st-animate {
+
+			.qodef-st-title, .qodef-st-text {
+				opacity: 1;
+				@include qodefTransform(translateY(0));
+			}
+
+		    .qodef-st-title {
+		        @include qodefTransition(.5s);
+		    }
+			    
+		    .qodef-st-text {
+				@include qodefTransition(.5s .2s);
+		    }
+
+			&.qodef-st-corners{
+
+				&.qodef-st-light-skin {
+
+					.qodef-corner-line{
+
+						&.line-1,
+						&.line-3, 
+						&.line-2,
+						&.line-4  {
+							&:before{
+								background-color: #fff !important;
+							}
+						}
+					}
+				}
+
+				.qodef-corner-line{
+
+					&.line-1,
+					&.line-3{
+						&:before{
+							height: 13px;
+							width: 1px;
+							background-color: #000;
+							border-left-width: 0px;
+							border-left-color: transparent;
+							@include qodefTransition(width .5s,height .5s .4s,background-color .5s .4s, border-left-width .1s .4s, border-left-color .1s .4s);
+						}
+					}
+
+
+					&.line-2,
+					&.line-4{
+						&:before{
+							height: 1px;
+							width: 13px;
+							background-color: #000;
+							@include qodefTransition(width .5s,height .5s .3s,background-color .5s .4s,border-right .1s);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Section Title shortcode styles - end
+   ========================================================================== */
+
+

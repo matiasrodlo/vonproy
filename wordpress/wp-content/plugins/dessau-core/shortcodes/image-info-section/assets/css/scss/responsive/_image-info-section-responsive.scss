@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Image Info Section shortcode responsive style - begin
+   ========================================================================== */
+
+    .qodef-image-info-section-holder {
+
+        &.qodef-has-border {
+            .qodef-iis-text-holder {
+                div.qodef-iis-text-inner {
+                    @include ipad-landscape {
+                        padding: 84px 80px 94px;
+                        border: 1px solid #363636 !important;
+                    }
+                    @include phone-landscape {
+                        padding: 84px 20px 94px;
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+
+        &.qodef-image-on-right-side:not(.qodef-has-border) .qodef-iis-text-inner {
+            @include ipad-landscape {
+                padding: 84px 80px 0;
+            }
+            @include phone-landscape {
+                padding: 84px 20px 0px;
+            }
+        }
+
+        @include ipad-landscape {
+            display: block;
+
+            .qodef-iis-text-holder {
+                div.qodef-iis-text-inner {
+                    margin: 10px 0 0;
+                    padding: 84px 80px 0;
+                }
+            }
+
+            .qodef-iis-image,
+            .qodef-iis-text-holder {
+                width: 100%;
+            }
+        }
+
+        @include phone-landscape {
+            .qodef-iis-text-holder {
+                div.qodef-iis-text-inner {
+                    padding: 84px 20px 0;
+                }
+            }
+        }
+    }
+
+/* ==========================================================================
+   Image Info Section shortcode responsive style - end
+   ========================================================================== */

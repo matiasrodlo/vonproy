@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Portfolio Single - Small Gallery layout style - begin
+   ========================================================================== */
+
+.qodef-portfolio-single-holder {
+    
+    &.qodef-ps-small-gallery-layout {
+
+        .qodef-ps-info-holder {
+            &:not(.qodef-ps-info-sticky-holder) {
+                margin-top: 0;
+            }
+        }
+    
+        .qodef-ps-image-holder {
+            width: 100%;
+            margin-bottom: -13px;
+        
+            .qodef-ps-image {
+                float: left;
+            
+                a {
+                    @include qodefImageOverlayHoverStyle();
+                }
+            }
+        }
+    
+        .qodef-ps-content-item {
+            margin: 0 0 30px;
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio Single - Small Gallery layout style - end
+   ========================================================================== */

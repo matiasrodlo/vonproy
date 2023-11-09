@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Pricing Tables shortcode style Responsive - begin
+   ========================================================================== */
+
+.qodef-pricing-tables {
+    &.qodef-three-columns {
+        .qodef-price-table {
+            @include ipad-portrait {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Pricing Tables shortcode style Responsive - end
+   ========================================================================== */

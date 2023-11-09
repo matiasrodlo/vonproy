@@ -1,0 +1,291 @@
+/* ==========================================================================
+   Image Info Section shortcode style - begin
+   ========================================================================== */
+
+.qodef-image-info-section-holder {
+	display: flex;
+	align-items: center;
+	
+	&.qodef-has-border {
+		.qodef-iis-text-inner{
+			box-sizing: border-box;
+			padding: 84px 80px 94px;
+			position: relative;
+		}
+
+		&.qodef-iis-item-animate-border {
+
+			.qodef-iis-text-inner {
+
+				&:before {
+					@include qodefAnimation(top-right-left 2s ease-in-out forwards);
+				}
+
+				&:after {
+					@include qodefAnimation(bottom 2s ease-in-out forwards);
+				}
+			}
+		}
+	}
+
+	&.qodef-image-on-left-side{
+		.qodef-iis-text-inner{
+			border-left: none;
+			padding: 84px 80px 94px;
+
+			&:before {
+			    content: "";
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    padding-left: 5px;
+			    width: 100%;
+			    height: 100%;
+			    border-top: 1px solid $additional-dark-color;
+			    border-right: 1px solid $additional-dark-color;
+			    visibility: hidden;
+			    z-index: -23;
+			}
+
+			&:after {
+			    content: "";
+			    position: absolute;
+			    bottom: -6px;
+			    padding-left: 5px;
+			    right: -5px;
+			    width: 100%;
+			    height: 100%;
+			    border-bottom: 1px solid $additional-dark-color;
+			    visibility: hidden;
+			    z-index: -23;
+			}
+		}
+	}
+
+	&.qodef-image-on-right-side{
+		flex-direction: row-reverse;
+
+		.qodef-iis-text-inner{
+			border-right: none;
+			padding: 84px 80px 94px;
+
+			&:before {
+			    content: "";
+			    position: absolute;
+			    top: 0;
+			    right: 0;
+			    padding-left: 5px;
+			    width: 100%;
+			    height: 100%;
+			    border-top: 1px solid $additional-dark-color;
+			    border-left: 1px solid $additional-dark-color;
+			    visibility: hidden;
+			    z-index: -23;
+			}
+
+			&:after {
+			    content: "";
+			    position: absolute;
+			    bottom: -6px;
+			    padding-left: 5px;
+			    left: -5px;
+			    width: 100%;
+			    height: 100%;
+			    border-bottom: 1px solid $additional-dark-color;
+			    visibility: hidden;
+			    z-index: -23;
+			}
+		}
+
+		&:not(.qodef-has-border) {
+			.qodef-iis-text-inner{
+				padding: 84px 80px 94px 0;
+			}
+		}
+	}
+
+	.qodef-iis-image,
+	.qodef-iis-text-holder{
+		width: 50%;
+	}
+	
+	.qodef-iis-image {
+
+		.qodef-iis-image-inner{
+			width: 100%;
+		}
+		
+		a, img {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	.qodef-iis-text-holder {
+		text-align: left;
+		align-self: center;
+	}
+
+	.qodef-iis-title {
+		margin: 0;
+	}
+	
+	.qodef-iis-text {
+		margin: 18px 0 0;
+	}
+
+	.qodef-iis-button{
+		margin-top: 27px;
+	}
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-custom-link {
+
+		.qodef-iis-image {
+			@include qodefTransition(.5s);
+
+			&:hover {
+				@include qodefTransform(translateY(-4px));
+			}
+		}
+	}
+	
+	/***** Custom Link Behavior Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-lightbox {
+		
+		.qodef-iis-image {
+			
+			a {
+				@include qodefImageOverlayHoverStyle();
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-zoom {
+		
+		.qodef-iis-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include qodefTransform(scale(1.04));
+				}
+			}
+			
+			img {
+				@include qodefTransform(scale(1));
+				@include qodefTransitionTransform(.3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.qodef-image-behavior-grayscale {
+		
+		.qodef-iis-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include qodefTransition(all .3s ease-in-out);
+			}
+		}
+	}
+	/***** Grayscale Behavior Style - end *****/
+
+	@keyframes bottom {
+	    0% {
+	        width: 0;
+	        height: 0;
+	        padding-top: 0;
+	        visibility: hidden;
+	    }
+	    25% {
+	        width: 0;
+	        height: 0;
+	        padding-top: 0;
+	        visibility: hidden;
+	    }
+	    50% {
+	        width: 0;
+	        height: 0;
+	        padding-top: 0;
+	        visibility: hidden;
+	    }
+	    75% {
+	        width: 100%;
+	        height: 100%;
+	        visibility: visible;
+	    }
+	    100% {
+	        width: 100%;
+	        height: 100%;
+	        opacity: 1;
+	        visibility: visible;
+	    }
+	}
+
+	@keyframes top-right-left {
+	    0% {
+	        width: 0;
+	        height: 0;
+	        padding-top: 0;
+	        visibility: visible;
+	    }
+	    25% {
+	        width: 100%;
+	        height: 0;
+	        padding-top: 0;
+	        visibility: visible;
+	    }
+	    50% {
+	        height: 100%;
+	        width: 100%;
+	        padding-top: 5px;
+	        visibility: visible;
+	    }
+	    75% {
+	        padding-top: 5px;
+	        visibility: visible;
+	    }
+	    100% {
+	        padding-top: 5px;
+	        visibility: visible;
+	    }
+	}
+}
+/* ==========================================================================
+   Image Info Section shortcode style - end
+   ========================================================================== */
